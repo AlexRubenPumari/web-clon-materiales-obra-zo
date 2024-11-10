@@ -1,0 +1,106 @@
+// variables
+$co-fondo-principal:rgb(255, 255, 255);
+$co-fondo-sec:rgb(238, 238, 238);
+$co-controles:rgb(59, 159, 100);
+$co-btn-primario:rgb(255, 158, 0);
+$co-ppal-texto:hsl(0, 0%, 98%);
+.encbzdo
+{
+    background-color: $co-fondo-principal;
+    &__logo
+    {
+        width: 7rem;
+    }
+    &__lista
+    {
+        display: none;
+    }
+    &__nav-mob
+    {
+        font-size: 1.1rem;
+        padding:.5em .55em;
+        border: 1px solid;
+        cursor: pointer;
+        color: $co-controles;
+    }
+}
+.banner
+{
+    padding: 4rem 0;
+
+    color:$co-ppal-texto;
+    text-align: center;
+    font-weight: bolder;
+    background:{
+        image:linear-gradient(rgba(59, 159, 100, .9)
+        , rgba(59, 159, 100, .9)), url('/assets/images/jpg-png/05_landing-b2b-1.jpg');
+        size: cover;
+        position: center;
+        color:rgb(59, 159, 100);
+    }
+    &__titulo
+    {
+        font-size: 1.2rem;
+        margin-bottom: 1.7em;
+    }
+    &__texto
+    {
+        margin-bottom: 1.7em;
+    }
+    &__boton
+    {
+        @extend %boton;
+        margin:0 auto;
+        background-color: $co-btn-primario;
+    }
+}
+%boton
+{
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: .5em 1.1em;
+    font:{
+        weight:bolder;
+        size:.8rem;
+    }
+}
+.sobre-nos
+{   
+    background-color: $co-fondo-principal;
+    padding: 4rem 0;
+    &__titulo
+    {
+        font-weight: bolder;
+        text-align: center;
+    }
+    &__img
+    {
+        margin-bottom: 5rem;
+    }
+    &__contenedor
+    {
+        padding: 3rem 0;
+        border-top: 1px solid hsl(0, 0%, 50%, .4);
+        background-color: aquamarine;
+    }
+}
+.img-label
+{
+    background-color: red;
+    text-align: center;
+    // max-width: 14rem; @medua
+    &__icono
+    {
+        display: block !important;
+        color: $co-btn-primario;
+        font-size: 3.5rem;
+    }
+    &__texto
+    {
+        border: 1px solid black;
+    }
+}
+.contacto
+{
+    background-color: $co-fondo-sec;
+}
