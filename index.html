@@ -10,6 +10,11 @@
 
     <!-- Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="encbzdo">
@@ -35,104 +40,162 @@
     </header>
     <main>
         <section class="sobre-nos">
-            <h2 class="sobre-nos__titulo">Trabajamos con primeras marcas</h2>
-            <div class="sobre-nos__img">
-                <picture>
-                    <source media="(max-width: 500px)" srcset="assets/images/jpg-png/12_2404-KOP-Banner-marcas-landing-mobile-1.png">
-                    <source media="(max-width: 800px)" srcset="assets/images/jpg-png/10_banner-marcas-landing-desktop-768x185.png">
-                    <img src="assets/images/jpg-png/11_banner-marcas-landing-desktop-800x193.png" alt="banner">
-                </picture>
-            </div>
-            <div class="sobre-nos__contenedor">
-                <div class="img-label">
-                    <i class="fa fa-percent img-label__icono" aria-hidden="true"></i>
-                    <span class="img-label__texto">Descuentos exclusivos por cantidad</span>
+            <div class="sobre-nos__wrapper">
+                <h2 class="sobre-nos__titulo">Trabajamos con primeras marcas</h2>
+                <div class="sobre-nos__img">
+                    <picture>
+                        <source media="(max-width: 500px)" srcset="assets/images/jpg-png/12_2404-KOP-Banner-marcas-landing-mobile-1.png">
+                        <source media="(max-width: 800px)" srcset="assets/images/jpg-png/10_banner-marcas-landing-desktop-768x185.png">
+                        <img src="assets/images/jpg-png/11_banner-marcas-landing-desktop-800x193.png" alt="banner">
+                    </picture>
                 </div>
-                <div class="img-label">
-                    <i class="fab fa-whatsapp img-label__icono" aria-hidden="true"></i>
-                    <span class="img-label__texto">Atención inmediata por WhatsApp</span>
-                    
-                </div>
-                <div class="img-label">
-                    <i class="fa fa-truck  img-label__icono" aria-hidden="true"></i>
-                    <span class="img-label__texto">Amplio stock y envíos a todo el país (logística propia)</span>
-                </div>
-                <div class="img-label">
-                    <i class="fa fa-map img-label__icono" aria-hidden="true"></i><span class="img-label__texto">
-                    Entrega sin cargo en Provincia de Buenos Aires</span>
+                <div class="sobre-nos__contenedor">
+                    <div class="img-label">
+                        <i class="fa fa-percent img-label__icono" aria-hidden="true"></i>
+                        <span class="img-label__texto">Descuentos exclusivos por cantidad</span>
+                    </div>
+                    <div class="img-label">
+                        <i class="fab fa-whatsapp img-label__icono" aria-hidden="true"></i>
+                        <span class="img-label__texto">Atención inmediata por WhatsApp</span>
+                        
+                    </div>
+                    <div class="img-label img-label--fluido">
+                        <i class="fa fa-truck  img-label__icono" aria-hidden="true"></i>
+                        <span class="img-label__texto">Amplio stock y envíos a todo el país (logística propia)</span>
+                    </div>
+                    <div class="img-label img-label--fluido">
+                        <i class="fa fa-map img-label__icono" aria-hidden="true"></i><span class="img-label__texto">
+                        Entrega sin cargo en Provincia de Buenos Aires</span>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="contacto">
-            <h2 class="contacto__titulo">Envianos tu consulta</h2>
-            <form action="">
-                <label for="">Tipo de atención</label>
-                <select name="select">
-                    <option value="" selected>Seleccionar...</option>
-                    <option value="">Sucursal Luján</option>
-                    <option value="">Sucursal Mercedes</option>
-                    <option value="">Sucursal Pinamar</option>
-                    <option value="">Atención Mayoristas</option>
-                </select>
-                <label for="">Nombre y apellido</label>
-                <input type="text">
-                <label for="">Email</label>
-                <input type="email">
-                <label for="">Teléfono</label>
-                <input type="tel" placeholder="Cód. de área + numero">
-                <label for="">Empresa</label>
-                <input type="text">
-                <label for="">Localidad</label>
-                <input type="text">
-                <label for="">Mensaje</label>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Detallar motivo de la consulta y/o productos de interés"></textarea>
-                <input type="submit" value="Enviar consulta">
-            </form>
+            <div class="contacto__contenedor">
+                <h2 class="contacto__titulo">Envianos tu consulta</h2>
+                <form action="" class="form">
+                    <div class="form__input form__input--fluido">
+                        <label class="input__label" for="">Tipo de atención</label>
+                        <select name="select" class="input">
+                            <option value="" selected>Seleccionar...</option>
+                            <option value="">Sucursal Luján</option>
+                            <option value="">Sucursal Mercedes</option>
+                            <option value="">Sucursal Pinamar</option>
+                            <option value="">Atención Mayoristas</option>
+                        </select>
+                    </div>
+                    <div class="form__input form__input--fluido">
+                        <label class="input__label" for="">Nombre y apellido</label>
+                        <input type="text" class="input">
+                    </div>
+                    <div class="form__input">
+                        <label class="input__label" for="">Email</label>
+                        <input type="email" class="input">
+                    </div>
+                    <div class="form__input">
+                        <label class="input__label" for="">Teléfono</label>
+                        <input type="tel" placeholder="Cód. de área + numero" class="input">
+                    </div>
+                    <div class="form__input">
+                        <label class="input__label" for="">Empresa</label>
+                        <input type="text" class="input">
+                    </div>
+                    <div class="form__input">
+                        <label class="input__label" for="">Localidad</label>
+                        <input type="text" class="input">
+                    </div>
+                    <div class="form__input form__input--fluido">
+                        <label class="input__label" for="">Mensaje</label>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Detallar motivo de la consulta y/o productos de interés" class="input input--textarea" ></textarea>
+                    </div>
+                </form>
+                <input type="submit" value="Enviar consulta" class="contacto__btn">
+            </div>
         </section>
         <section class="obras">
-            <h2 class="obras__titulo">Todo para el inicio de obra</h2>
-            <p class="obras__texto">Madera saligna - Madera de Pino - Entablonados - Puntales - Postes - Fenólicos nacionales e importados - Vigas multilaminadas - Cercos de obra</p>
-            <input type="button" value="Cotizar proyecto" class="boton">
-            <div class="obras__contenedor">
-                <img src="assets/images/jpg-png/14_construccion-tradicional-3.jpg" alt="Imagen de obra" class="obras__img">
-                <img src="assets/images/jpg-png/16_construccion-tradicional-4.jpg" alt="Imagen de obra" class="obras__img">
-                <img src="assets/images/jpg-png/07_construccion-tradicional-5.jpg" alt="Imagen de obra" class="obras__img">
-                <img src="assets/images/jpg-png/15_construccion-tradicional-6.jpg" alt="Imagen de obra" class="obras__img">
-                <img src="assets/images/jpg-png/20_construccion-tradicional-2.jpg" alt="Imagen de obra" class="obras__img">
-                <img src="assets/images/jpg-png/13_construccion-tradicional-1.jpg" alt="Imagen de obra" class="obras__img">
+            <div class="obras__wrapper">
+                <div class="obras__seccion">
+                    <h2 class="obras__titulo">Todo para el inicio de obra</h2>
+                    <p class="obras__texto">Madera saligna - Madera de Pino - Entablonados - Puntales - Postes - Fenólicos nacionales e importados - Vigas multilaminadas - Cercos de obra</p>
+                    <input type="button" value="Cotizar proyecto" class="obras__boton">
+                </div>
+                <div class="obras__contenedor">
+                    <div class="obras__img">
+                        <img src="assets/images/jpg-png/14_construccion-tradicional-3.jpg" alt="Imagen de obra">
+                    </div>
+                    <div class="obras__img">
+                        <img src="assets/images/jpg-png/16_construccion-tradicional-4.jpg" alt="Imagen de obra">
+                    </div>
+                    <div class="obras__img">
+                        <img src="assets/images/jpg-png/07_construccion-tradicional-5.jpg" alt="Imagen de obra">
+                    </div>
+                    <div class="obras__img">
+                        <img src="assets/images/jpg-png/15_construccion-tradicional-6.jpg" alt="Imagen de obra">
+                    </div>
+                    <div class="obras__img">
+                        <img src="assets/images/jpg-png/20_construccion-tradicional-2.jpg" alt="Imagen de obra">
+                    </div>
+                    <div class="obras__img">
+                        <img src="assets/images/jpg-png/13_construccion-tradicional-1.jpg" alt="Imagen de obra">
+                    </div>   
+                </div>
             </div>
         </section>
         <section class="materiales">
-            <h2 class="materiales__titulo">Materiales para Steel Frame y Wood Frame</h2>
-            <p class="materiales__texto">
-                Perfiles de acero galvanizado - Puntales Telescópicos - Vigas Wood Frame - Machimbre de PVC - Machimbre de madera - Placas - Yeso - Revestimientos - Aislantes - Insumos
-            </p>
-            <input type="button" value="Pedir cotización">
-            <div class="materiales__contenedor">
-                <img src="assets/images/jpg-png/06_construccion-en-seco-1.jpg" alt="Imagen de obra" class="materiales__img">
-                <img src="assets/images/jpg-png/03_construccion-en-seco-2.jpg" alt="Imagen de obra" class="materiales__img">
-                <img src="assets/images/jpg-png/21_construccion-en-seco-3.jpg" alt="Imagen de obra" class="materiales__img">
-                <img src="assets/images/jpg-png/17_construccion-en-seco-4.jpg" alt="Imagen de obra" class="materiales__img">
-                <img src="assets/images/jpg-png/08_construccion-en-seco-5.jpg" alt="Imagen de obra" class="materiales__img">
-                <img src="assets/images/jpg-png/09_construccion-en-seco-6.jpg" alt="Imagen de obra" class="materiales__img">
+            <div class="materiales__wrapper">
+                <div class="materiales__seccion">
+                    <h2 class="materiales__titulo">Materiales para Steel Frame y Wood Frame</h2>
+                    <p class="materiales__texto">
+                        Perfiles de acero galvanizado - Puntales Telescópicos - Vigas Wood Frame - Machimbre de PVC - Machimbre de madera - Placas - Yeso - Revestimientos - Aislantes - Insumos
+                    </p>
+                    <input type="button" value="Pedir cotización" class="materiales__boton">
+                </div>
+                <div class="materiales__contenedor">
+                    <div class="materiales__img">
+                        <img src="assets/images/jpg-png/06_construccion-en-seco-1.jpg" alt="Imagen de obra" class="">
+                    </div>
+                    <div class="materiales__img">
+                        <img src="assets/images/jpg-png/03_construccion-en-seco-2.jpg" alt="Imagen de obra" class="">
+                    </div>
+                    <div class="materiales__img">
+                        <img src="assets/images/jpg-png/21_construccion-en-seco-3.jpg" alt="Imagen de obra" class="">
+                    </div>
+                    <div class="materiales__img">
+                        <img src="assets/images/jpg-png/17_construccion-en-seco-4.jpg" alt="Imagen de obra" class="">
+                    </div>
+                    <div class="materiales__img">
+                        <img src="assets/images/jpg-png/08_construccion-en-seco-5.jpg" alt="Imagen de obra" class="">
+                    </div>
+                    <div class="materiales__img">
+                        <img src="assets/images/jpg-png/09_construccion-en-seco-6.jpg" alt="Imagen de obra" class="">
+                    </div>              
+                </div>
             </div>
         </section>
         <section class="ubicacion">
-            <h2 class="ubicacion__titulo">¡Llegamos a todo el país!</h2>
-            <p class="ubicacion__texto">
-                Somos una empresa con <b>más de 35 años de trayectoria en el mercado.</b><br>
-                Nuestras oficinas comerciales se encuentran en <b>Luján (Buenos Aires)</b> y tenemos una sucursal en la ciudad de Mercedes.<br>
-                Contamos con <b>logística propia para agilizar la entrega directa a tu obra.</b>
-            </p>
-            <div class="ubicacion__contenedor">
-                <img src="assets/images/jpg-png/01_camion-logistica-kopruch.jpg" alt="Camión de transporte de materiales">
+            <div class="ubicacion__wrapper">
+                <div class="ubicacion__seccion">
+                    <h2 class="ubicacion__titulo">¡Llegamos a todo el país!</h2>
+                    <p class="ubicacion__texto">
+                        Somos una empresa con <b class="ubicacion__bold">más de 35 años de trayectoria en el mercado.</b>
+                    </p>
+                    <p class="ubicacion__texto">
+                        Nuestras oficinas comerciales se encuentran en <b class="ubicacion__bold">Luján (Buenos Aires)</b> y tenemos una sucursal en la ciudad de Mercedes.
+                    </p>
+                    <p class="ubicacion__texto">
+                        Contamos con <b class="ubicacion__bold">logística propia para agilizar la entrega directa a tu obra.</b>
+                    </p>
+                </div>
+                <div class="ubicacion__contenedor">
+                    <img src="assets/images/jpg-png/01_camion-logistica-kopruch.jpg" alt="Camión de transporte de materiales">
+                </div>
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="footer">
         <div class="banner">
             <h3 class="banner__titulo">¡Contá con nosotros para tu próxima obra!</h3>
-            <button class="boton">COMUNICATE CON NUESTROS VENDEDORES</button>
+            <button class="banner__boton">COMUNICATE CON NUESTROS VENDEDORES</button>
         </div>
         <div class="footer__contenedor">
             <address class="sucursal">

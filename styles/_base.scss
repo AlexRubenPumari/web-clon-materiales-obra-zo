@@ -4,7 +4,24 @@
     --color-primario:#181818;
     --color-secundario:#f0f0f0;
     /* Tipografias */
-    --tipog-ppal: Helvetica, Arial, sans-serif;
+    // .roboto-regular {
+    //     font-family: "Roboto", sans-serif;
+    //     font-weight: 400;
+    //     font-style: normal;
+    //   }
+      
+    //   .roboto-bold {
+    //     font-family: "Roboto", sans-serif;
+    //     font-weight: 700;
+    //     font-style: normal;
+    //   }
+      
+    //   .roboto-regular-italic {
+    //     font-family: "Roboto", sans-serif;
+    //     font-weight: 400;
+    //     font-style: italic;
+    //   }
+    --tipog-ppal: "Roboto", sans-serif;
     --tipog-secundaria: Verdana;
 }
 /* Reset de margin y padding */
@@ -97,6 +114,8 @@ body{
     /* Cien por ciento respecto a la config. del usuario */
     font-size: 100%;
     font-family: var(--tipog-ppal);
+    font-weight: 400;
+    font-style: normal;
     color: var(--color-primario);
     /* background-color: var(--color-secundario); */
     /* Opcional line-height de 1.4-1.6 */

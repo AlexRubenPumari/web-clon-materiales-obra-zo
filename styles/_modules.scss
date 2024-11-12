@@ -3,13 +3,65 @@ $co-fondo-principal:rgb(255, 255, 255);
 $co-fondo-sec:rgb(238, 238, 238);
 $co-controles:rgb(59, 159, 100);
 $co-btn-primario:rgb(255, 158, 0);
+
+
 $co-ppal-texto:hsl(0, 0%, 98%);
+$co-sec-texto:hsl(0, 0%, 10%);
+$co-terciario-texto:hsl(0, 0%, 35%);
+
+$tam-titulo:1.25rem;
+$tam-texto-ppal:1rem;
+$tam-texto-sec:0.9rem;
+$tam-texto-label:0.8rem;
+
+
+//clases extendidadas
+%boton
+{
+    cursor: pointer;
+    text-transform: uppercase;
+    // padding: .5em 1.1em; PC
+    padding: 1em 1.1em;
+    font:{
+        weight:bolder;
+        size:$tam-texto-sec;
+    }
+}
+%boton--verde
+{
+    @extend %boton;
+    background-color: $co-controles;
+    color: $co-ppal-texto;
+}
+%titulo
+{
+    font-size: $tam-titulo;
+    text-align: center;
+    font-weight: bolder;
+    margin:.3em 0 1.6em;
+}
+%texto-sec
+{
+    font:
+    {
+        style:italic;
+        size:$tam-texto-sec;
+    }
+    color: $co-terciario-texto;
+    margin-bottom: 1.4em;
+}
+
+
+
+// estilos
 .encbzdo
 {
     background-color: $co-fondo-principal;
     &__logo
     {
-        width: 7rem;
+        width: 22%;
+        min-width: 7rem;
+        max-width: 10.7rem;
     }
     &__lista
     {
@@ -18,15 +70,14 @@ $co-ppal-texto:hsl(0, 0%, 98%);
     &__nav-mob
     {
         font-size: 1.1rem;
-        padding:.5em .55em;
-        border: 1px solid;
+        padding:.55em .6em;
         cursor: pointer;
         color: $co-controles;
     }
 }
 .banner
 {
-    padding: 4rem 0;
+    padding: 4rem 1.4rem;
 
     color:$co-ppal-texto;
     text-align: center;
@@ -40,11 +91,12 @@ $co-ppal-texto:hsl(0, 0%, 98%);
     }
     &__titulo
     {
-        font-size: 1.2rem;
-        margin-bottom: 1.7em;
+        @extend %titulo;
+        font-size: 1.4rem;
     }
     &__texto
     {
+        font-size: $tam-texto-ppal;
         margin-bottom: 1.7em;
     }
     &__boton
@@ -54,24 +106,15 @@ $co-ppal-texto:hsl(0, 0%, 98%);
         background-color: $co-btn-primario;
     }
 }
-%boton
-{
-    cursor: pointer;
-    text-transform: uppercase;
-    padding: .5em 1.1em;
-    font:{
-        weight:bolder;
-        size:.8rem;
-    }
-}
+
+
 .sobre-nos
 {   
     background-color: $co-fondo-principal;
     padding: 4rem 0;
     &__titulo
     {
-        font-weight: bolder;
-        text-align: center;
+        @extend %titulo;
     }
     &__img
     {
@@ -81,26 +124,130 @@ $co-ppal-texto:hsl(0, 0%, 98%);
     {
         padding: 3rem 0;
         border-top: 1px solid hsl(0, 0%, 50%, .4);
-        background-color: aquamarine;
     }
 }
 .img-label
 {
-    background-color: red;
     text-align: center;
-    // max-width: 14rem; @medua
     &__icono
     {
         display: block !important;
+        margin-bottom: .3rem;
         color: $co-btn-primario;
-        font-size: 3.5rem;
+        font-size: 3.2rem;
     }
     &__texto
     {
-        border: 1px solid black;
+        display: block;
+        font-size: $tam-texto-sec;
+        color: $co-terciario-texto;
     }
 }
+
+
+
 .contacto
 {
     background-color: $co-fondo-sec;
+    padding: 4rem 0;
+    &__titulo
+    {
+        @extend %titulo;
+    }
+    &__btn
+    {
+        @extend %boton--verde;
+        width: 100%;
+        max-width: 25rem;
+        margin: 0 auto;
+    }
+}
+form
+{
+    margin: 0 auto;
+    max-width: 34rem;
+}
+.input
+{
+    width: 100%;
+    padding: .5em;
+
+    background-color: $co-fondo-principal;
+    font-size: $tam-texto-sec;
+    margin: .1em 0 1.2em;
+    &__label
+    {
+        font-size: $tam-texto-label;
+        &::after
+        {
+            content: ' *';
+            color: rgb(255,0,0);
+        }
+    }
+}
+
+.obras
+{
+    padding: 4rem 0;
+    &__titulo
+    {
+        @extend %titulo;
+        text-align: start;
+    }
+    &__texto
+    {
+        @extend %texto-sec;
+    }
+    &__boton
+    {
+        @extend %boton--verde;
+        width: 100%;
+    }
+}
+.materiales
+{
+    padding: 4rem 0;
+    background-color: $co-fondo-sec;
+    &__titulo
+    {
+        @extend %titulo;
+        text-align: start;
+    }
+    &__texto
+    {
+        @extend %texto-sec;
+    }
+    &__boton
+    {
+        @extend %boton--verde;
+        margin-bottom: 3em;
+    }
+}
+.ubicacion
+{
+    padding: 4rem 0;
+    &__titulo
+    {
+        @extend %titulo;
+        text-align: start;
+    }
+    &__texto
+    {
+        @extend %texto-sec;
+        font-style: normal;
+    }
+    &__bold
+    {
+        font-weight: bolder;
+    }
+}
+.footer
+{
+    background-color: rgb(244, 244, 244);
+}
+.derechos-reservados
+{
+    background-color: hsl(0, 0%, 87%);
+    font-size: $tam-texto-label;
+    color: $co-terciario-texto;
 }

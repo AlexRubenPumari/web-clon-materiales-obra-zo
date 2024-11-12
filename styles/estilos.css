@@ -5,7 +5,7 @@
   --color-primario:#181818;
   --color-secundario:#f0f0f0;
   /* Tipografias */
-  --tipog-ppal: Helvetica, Arial, sans-serif;
+  --tipog-ppal: "Roboto", sans-serif;
   --tipog-secundaria: Verdana;
 }
 
@@ -111,6 +111,8 @@ body {
   /* Cien por ciento respecto a la config. del usuario */
   font-size: 100%;
   font-family: var(--tipog-ppal);
+  font-weight: 400;
+  font-style: normal;
   color: var(--color-primario);
   /* background-color: var(--color-secundario); */
   /* Opcional line-height de 1.4-1.6 */
@@ -125,6 +127,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.materiales__contenedor, .obras__contenedor {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.6rem;
+}
+
+.ubicacion__wrapper, .materiales__wrapper, .obras__wrapper, .contacto__contenedor, .sobre-nos__wrapper, .encbzdo__contenedor {
+  padding: 0 1.4rem;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
 .encbzdo__contenedor {
   display: flex;
   align-items: center;
@@ -135,30 +149,121 @@ body {
 .sobre-nos__contenedor {
   display: flex;
   flex-flow: row wrap;
+  align-items: flex-start;
+  align-content: center;
+  justify-content: space-between;
+  gap: 2.5rem 3rem;
+}
+
+.img-label {
+  flex: 1 1 0;
+  min-width: 13rem;
+}
+
+.img-label--fluido {
+  min-width: 15rem;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.2rem;
+}
+.form__input {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  min-width: 16.2rem;
+}
+.form__input--fluido {
+  flex-basis: 100%;
+}
+
+.materiales__img, .obras__img {
+  flex: 1 1 9.5rem; /* flex-basis:0 */
+}
+
+.obras__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem 3rem;
   align-items: center;
-  justify-content: space-around;
-  gap: 1rem;
+  justify-content: center;
+}
+.obras__seccion {
+  flex: 1 1 18rem;
+}
+.obras__contenedor {
+  flex: 1 1 29.7rem;
+}
+.materiales__wrapper {
+  display: flex;
+  flex-flow: row-reverse;
+  flex-wrap: wrap;
+  gap: 1.4rem 3rem;
+  align-items: center;
+  justify-content: center;
+}
+.materiales__seccion {
+  flex: 1 1 18rem;
+}
+.materiales__contenedor {
+  flex: 1 1 29.7rem;
+}
+.derechos-reservados {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner__boton, .materiales__boton, .obras__boton, .contacto__btn {
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 1em 1.1em;
+  font-weight: bolder;
+  font-size: 0.9rem;
+}
+
+.materiales__boton, .obras__boton, .contacto__btn {
+  background-color: rgb(59, 159, 100);
+  color: hsl(0, 0%, 98%);
+}
+
+.ubicacion__titulo, .materiales__titulo, .obras__titulo, .contacto__titulo, .sobre-nos__titulo, .banner__titulo {
+  font-size: 1.25rem;
+  text-align: center;
+  font-weight: bolder;
+  margin: 0.3em 0 1.6em;
+}
+
+.ubicacion__texto, .materiales__texto, .obras__texto {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: hsl(0, 0%, 35%);
+  margin-bottom: 1.4em;
 }
 
 .encbzdo {
   background-color: rgb(255, 255, 255);
 }
 .encbzdo__logo {
-  width: 7rem;
+  width: 22%;
+  min-width: 7rem;
+  max-width: 10.7rem;
 }
 .encbzdo__lista {
   display: none;
 }
 .encbzdo__nav-mob {
   font-size: 1.1rem;
-  padding: 0.5em 0.55em;
-  border: 1px solid;
+  padding: 0.55em 0.6em;
   cursor: pointer;
   color: rgb(59, 159, 100);
 }
 
 .banner {
-  padding: 4rem 0;
+  padding: 4rem 1.4rem;
   color: hsl(0, 0%, 98%);
   text-align: center;
   font-weight: bolder;
@@ -168,10 +273,10 @@ body {
   background-color: rgb(59, 159, 100);
 }
 .banner__titulo {
-  font-size: 1.2rem;
-  margin-bottom: 1.7em;
+  font-size: 1.4rem;
 }
 .banner__texto {
+  font-size: 1rem;
   margin-bottom: 1.7em;
 }
 .banner__boton {
@@ -179,21 +284,9 @@ body {
   background-color: rgb(255, 158, 0);
 }
 
-.banner__boton {
-  cursor: pointer;
-  text-transform: uppercase;
-  padding: 0.5em 1.1em;
-  font-weight: bolder;
-  font-size: 0.8rem;
-}
-
 .sobre-nos {
   background-color: rgb(255, 255, 255);
   padding: 4rem 0;
-}
-.sobre-nos__titulo {
-  font-weight: bolder;
-  text-align: center;
 }
 .sobre-nos__img {
   margin-bottom: 5rem;
@@ -201,24 +294,102 @@ body {
 .sobre-nos__contenedor {
   padding: 3rem 0;
   border-top: 1px solid hsla(0, 0%, 50%, 0.4);
-  background-color: aquamarine;
 }
 
 .img-label {
-  background-color: red;
   text-align: center;
 }
 .img-label__icono {
   display: block !important;
+  margin-bottom: 0.3rem;
   color: rgb(255, 158, 0);
-  font-size: 3.5rem;
+  font-size: 3.2rem;
 }
 .img-label__texto {
-  border: 1px solid black;
+  display: block;
+  font-size: 0.9rem;
+  color: hsl(0, 0%, 35%);
 }
 
 .contacto {
   background-color: rgb(238, 238, 238);
+  padding: 4rem 0;
+}
+.contacto__btn {
+  width: 100%;
+  max-width: 25rem;
+  margin: 0 auto;
+}
+
+form {
+  margin: 0 auto;
+  max-width: 34rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.5em;
+  background-color: rgb(255, 255, 255);
+  font-size: 0.9rem;
+  margin: 0.1em 0 1.2em;
+}
+.input__label {
+  font-size: 0.8rem;
+}
+.input__label::after {
+  content: " *";
+  color: rgb(255, 0, 0);
+}
+
+.obras {
+  padding: 4rem 0;
+}
+.obras__titulo {
+  text-align: start;
+}
+.obras__boton {
+  width: 100%;
+}
+
+.materiales {
+  padding: 4rem 0;
+  background-color: rgb(238, 238, 238);
+}
+.materiales__titulo {
+  text-align: start;
+}
+.materiales__boton {
+  margin-bottom: 3em;
+}
+
+.ubicacion {
+  padding: 4rem 0;
+}
+.ubicacion__titulo {
+  text-align: start;
+}
+.ubicacion__texto {
+  font-style: normal;
+}
+.ubicacion__bold {
+  font-weight: bolder;
+}
+
+.footer {
+  background-color: rgb(244, 244, 244);
+}
+
+.derechos-reservados {
+  background-color: hsl(0, 0%, 87%);
+  font-size: 0.8rem;
+  color: hsl(0, 0%, 35%);
+}
+
+.input--textarea {
+  resize: vertical;
+  min-height: 3rem;
+  height: 6rem;
+  margin-bottom: 2em;
 }
 
 /*# sourceMappingURL=estilos.css.map */

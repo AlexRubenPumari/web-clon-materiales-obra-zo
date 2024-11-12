@@ -1,5 +1,21 @@
+%galeria-flex
+{
+    display: flex;
+    flex-flow: row wrap;
+    gap: .6rem;
+}
+
+%contenedor
+{
+    padding: 0 1.4rem;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
 .encbzdo__contenedor
 {
+    @extend %contenedor;
+
     display:flex;
     align-items: center;
     justify-content: space-between;
@@ -8,12 +24,124 @@
 }
 .sobre-nos
 {
+    &__wrapper
+    {
+        @extend %contenedor;
+    }
     &__contenedor
     {
         display: flex;
         flex-flow: row wrap;
-        align-items: center;
-        justify-content: space-around;
-        gap: 1rem;
+        align-items: flex-start;
+        align-content: center;
+        justify-content: space-between;
+        gap: 2.5rem 3rem;
     }
+}
+.img-label
+{
+    flex: 1 1 0;
+    min-width: 13rem;
+}
+.img-label--fluido
+{
+    min-width: 15rem;
+}
+.contacto__contenedor
+{
+    @extend %contenedor;
+}
+.form
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1.2rem;
+    &__input
+    {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0;
+        min-width: 16.2rem;
+    }
+    &__input--fluido
+    {
+        flex-basis: 100%;
+    }
+}
+%galeria-flex-items
+{
+    flex: 1 1 9.5rem; /* flex-basis:0 */
+    // min-width: 11.9rem;
+}
+.obras
+{
+    &__wrapper
+    {
+        @extend %contenedor;
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.4rem 3rem;
+        align-items: center;
+        justify-content: center;
+    }
+    &__seccion
+    {
+        flex: 1 1 18rem;
+    }
+    &__contenedor
+    {
+        // contenedor que contiene las imagenes
+        flex: 1 1 29.7rem;
+
+        @extend %galeria-flex;
+    }
+    &__img
+    {
+        @extend %galeria-flex-items;
+    }
+}
+.materiales
+{
+    &__wrapper
+    {
+        @extend %contenedor;
+
+        display: flex;
+        flex-flow: row-reverse;
+        flex-wrap: wrap;
+        gap: 1.4rem 3rem;
+        align-items: center;
+        justify-content: center;
+    }
+    &__seccion
+    {
+        flex: 1 1 18rem;
+    }
+    &__contenedor
+    {
+        // contenedor que contiene las imagenes
+        flex: 1 1 29.7rem;
+
+        @extend %galeria-flex;
+    }
+    &__img
+    {
+        @extend %galeria-flex-items;
+    }
+}
+.ubicacion
+{
+    &__wrapper
+    {
+        @extend %contenedor;
+    }
+}
+.derechos-reservados
+{
+    height: 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
