@@ -95,7 +95,7 @@
     &__contenedor
     {
         // contenedor que contiene las imagenes
-        flex: 1 1 29.7rem;
+        flex: 1 1 32.5rem;
 
         @extend %galeria-flex;
     }
@@ -120,7 +120,7 @@
     &__contenedor
     {
         // contenedor que contiene las imagenes
-        flex: 1 1 29.7rem;
+        flex: 1 1 32.5rem;
 
         @extend %galeria-flex;
     }
@@ -154,8 +154,8 @@
     {
         @extend %contenedor;
 
-        @include flex-conteiner($a-items: stretch, $j-content:space-between, $f-wrap:wrap, $f-direction: column);
-        gap: 1.5rem;
+        @include flex-conteiner($f-direction: column);
+        gap: 2rem;
 
         padding-top: 2.5rem;
         padding-bottom: 2.5rem;
@@ -163,7 +163,7 @@
     
     &__sucursales
     {
-        @include flex-conteiner(flex-start, space-between, nowrap, column);
+        @include flex-conteiner($f-direction: column);
         gap: 2rem;
     }
 }
@@ -174,3 +174,7 @@
 
     @include flex-conteiner(center,center)
 }
+
+
+
+

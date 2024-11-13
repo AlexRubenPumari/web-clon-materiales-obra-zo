@@ -198,7 +198,7 @@ body {
   flex: 1 1 18rem;
 }
 .obras__contenedor {
-  flex: 1 1 29.7rem;
+  flex: 1 1 32.5rem;
 }
 .materiales__wrapper {
   display: flex;
@@ -212,7 +212,7 @@ body {
   flex: 1 1 18rem;
 }
 .materiales__contenedor {
-  flex: 1 1 29.7rem;
+  flex: 1 1 32.5rem;
 }
 .ubicacion__wrapper {
   display: flex;
@@ -234,17 +234,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  justify-content: stretch;
+  flex-wrap: nowrap;
+  gap: 2rem;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
 .footer__sucursales {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: stretch;
+  justify-content: stretch;
   flex-wrap: nowrap;
   gap: 2rem;
 }
@@ -261,7 +261,7 @@ body {
 .banner__boton, .materiales__boton, .obras__boton, .contacto__btn {
   cursor: pointer;
   text-transform: uppercase;
-  padding: 1em 1.1em;
+  padding: 1.4em 1.1em;
   font-weight: bolder;
   font-size: 0.9rem;
 }
@@ -298,7 +298,7 @@ body {
 }
 .encbzdo__nav-mob {
   font-size: 1.1rem;
-  padding: 0.55em 0.6em;
+  padding: 0.6em 0.65em;
   cursor: pointer;
   color: rgb(59, 159, 100);
 }
@@ -314,7 +314,8 @@ body {
   background-color: rgb(59, 159, 100);
 }
 .banner__titulo {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
 }
 .banner__texto {
   font-size: 1rem;
@@ -360,6 +361,7 @@ body {
   width: 100%;
   max-width: 25rem;
   margin: 0 auto;
+  transition: background-color 250ms linear;
 }
 
 .form {
@@ -390,6 +392,7 @@ body {
 }
 .obras__boton {
   width: 100%;
+  transition: background-color 250ms linear;
 }
 
 .materiales {
@@ -401,6 +404,7 @@ body {
 }
 .materiales__boton {
   margin-bottom: 3em;
+  transition: background-color 250ms linear;
 }
 
 .ubicacion {
@@ -434,6 +438,7 @@ body {
 }
 .sucursal__texto {
   font-size: 0.8rem;
+  color: hsl(0, 0%, 35%);
 }
 
 .derechos-reservados {
@@ -442,6 +447,60 @@ body {
   color: hsl(0, 0%, 35%);
 }
 
+@media (hover: hover) {
+  .banner__boton, .contacto__btn, .obras__boton, .materiales__boton {
+    padding: 0.7em 1.1em;
+  }
+  .banner__boton:hover {
+    outline: 1.5px solid hsla(0, 0%, 0%, 0.3);
+  }
+  .contacto__btn:hover, .obras__boton:hover, .materiales__boton:hover {
+    background-color: rgb(50, 114, 77);
+  }
+  .encbzdo__nav-mob:hover {
+    color: hsl(0, 0%, 10%);
+  }
+  .encbzdo__item:hover {
+    color: hsl(0, 0%, 98%);
+    background-color: rgb(59, 159, 100);
+  }
+}
+@media (min-width: 920px) {
+  .footer__contenedor {
+    flex-direction: row;
+  }
+  .footer__sucursales {
+    flex: 1 1 0;
+    flex-direction: row;
+  }
+  .sucursal {
+    flex: 1 1 0;
+  }
+  .encbzdo__nav-mob {
+    background-color: red;
+    display: none !important; /*por motivos del icono*/
+  }
+  .encbzdo__lista {
+    display: flex;
+    gap: 0.5rem;
+    color: rgb(59, 159, 100);
+    font-weight: bolder;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+  }
+  .encbzdo__item {
+    padding: 0.15rem 0.3rem;
+    cursor: pointer;
+  }
+}
+@media (min-width: 690px) {
+  .obras__img, .materiales__img {
+    flex-basis: calc(33.3333333333% - 0.4rem);
+  }
+  .img-label, .img-label--fluido {
+    min-width: 0;
+  }
+}
 .input--textarea {
   resize: vertical;
   min-height: 3rem;

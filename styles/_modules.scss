@@ -2,6 +2,7 @@
 $co-fondo-principal:rgb(255, 255, 255);
 $co-fondo-sec:rgb(238, 238, 238);
 $co-controles:rgb(59, 159, 100);
+$co-controles-hover:rgb(50, 114, 77);
 $co-btn-primario:rgb(255, 158, 0);
 
 
@@ -21,7 +22,7 @@ $tam-texto-label:0.8rem;
     cursor: pointer;
     text-transform: uppercase;
     // padding: .5em 1.1em; PC
-    padding: 1em 1.1em;
+    padding: 1.4em 1.1em;
     font:{
         weight:bolder;
         size:$tam-texto-sec;
@@ -70,7 +71,7 @@ $tam-texto-label:0.8rem;
     &__nav-mob
     {
         font-size: 1.1rem;
-        padding:.55em .6em;
+        padding:.6em .65em;
         cursor: pointer;
         color: $co-controles;
     }
@@ -92,7 +93,8 @@ $tam-texto-label:0.8rem;
     &__titulo
     {
         @extend %titulo;
-        font-size: 1.4rem;
+        font-size: 1.5rem;
+        line-height: 1.7rem;
     }
     &__texto
     {
@@ -160,6 +162,7 @@ $tam-texto-label:0.8rem;
         width: 100%;
         max-width: 25rem;
         margin: 0 auto;
+        transition: background-color 250ms linear;
     }
 }
 .form
@@ -202,6 +205,7 @@ $tam-texto-label:0.8rem;
     {
         @extend %boton--verde;
         width: 100%;
+        transition: background-color 250ms linear;
     }
 }
 .materiales
@@ -221,6 +225,7 @@ $tam-texto-label:0.8rem;
     {
         @extend %boton--verde;
         margin-bottom: 3em;
+        transition: background-color 250ms linear;
     }
 }
 .ubicacion
@@ -244,12 +249,6 @@ $tam-texto-label:0.8rem;
 .footer
 {
     background-color: rgb(244, 244, 244);
-    // &__logo
-    // {
-    //     width: 22%;
-    //     min-width: 7rem;
-    //     max-width: 10.7rem;
-    // }
     &__logo     
     {
         min-width: 8.5rem;
@@ -272,7 +271,8 @@ $tam-texto-label:0.8rem;
     }
     &__texto
     {
-        font-size: .8rem;
+        font-size: $tam-texto-label;
+        color: $co-terciario-texto;
     }
 }
 .derechos-reservados
@@ -280,4 +280,82 @@ $tam-texto-label:0.8rem;
     background-color: hsl(0, 0%, 87%);
     font-size: $tam-texto-label;
     color: $co-terciario-texto;
+}
+
+// mediaquerys
+@media (hover: hover)
+{
+    %boton
+    {
+        padding: .7em 1.1em;
+    }
+    .banner__boton:hover
+    {
+        outline: 1.5px solid hsl(0, 0%, 0%, .3);
+    }
+    .contacto__btn:hover, .obras__boton:hover, .materiales__boton:hover
+    {
+        background-color: $co-controles-hover;        
+    }
+    .encbzdo__nav-mob:hover
+    {
+        color: $co-sec-texto;
+    }
+    .encbzdo__item:hover
+    {
+        color: $co-ppal-texto;
+        background-color: $co-controles;
+    }
+}
+
+// mediaquerys para simular el comportamiento de la pagina (opcional)
+@media (min-width: 920px)
+{
+    .footer
+    {
+        &__contenedor
+        {
+            flex-direction: row;
+        }
+        &__sucursales
+        {
+            flex: 1 1 0;
+            flex-direction: row;
+        }
+    }
+    .sucursal
+    {
+        flex: 1 1 0;
+    }
+    .encbzdo__nav-mob
+    {
+        background-color: red;
+        display: none !important; /*por motivos del icono*/
+    }
+    .encbzdo__lista
+    {
+        display: flex;
+        gap: .5rem;
+
+        color: $co-controles;
+        font-weight: bolder;
+        font-size: $tam-texto-label;
+        text-transform: uppercase;
+    }
+    .encbzdo__item
+    {
+        padding: .15rem 0.3rem;
+        cursor: pointer;
+    }
+}
+@media (min-width: 690px)
+{
+    .obras__img, .materiales__img
+    {
+        flex-basis: calc(100%/3 - .4rem);
+    }
+    .img-label, .img-label--fluido
+    {
+        min-width: 0;
+    }
 }
