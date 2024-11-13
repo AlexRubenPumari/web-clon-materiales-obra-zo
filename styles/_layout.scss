@@ -1,3 +1,4 @@
+// clases extendidas
 %galeria-flex
 {
     display: flex;
@@ -11,14 +12,27 @@
     max-width: 980px;
     margin: 0 auto;
 }
+%galeria-flex-items
+{
+    flex: 1 1 9.5rem;
+}
+// mixins
+@mixin flex-conteiner($a-items: stretch, $j-content: stretch, $f-wrap: nowrap, $f-direction: row)
+{
+    display: flex;
+    flex-direction: $f-direction;
+    align-items: $a-items;
+    justify-content: $j-content;
+    flex-wrap: $f-wrap;
+}
 
+
+
+// estilos css
 .encbzdo__contenedor
 {
     @extend %contenedor;
-
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flex-conteiner(center, space-between);
 
     height: 3.8rem;
 }
@@ -30,11 +44,8 @@
     }
     &__contenedor
     {
-        display: flex;
-        flex-flow: row wrap;
-        align-items: flex-start;
+        @include flex-conteiner(flex-start, space-between, wrap);
         align-content: center;
-        justify-content: space-between;
         gap: 2.5rem 3rem;
     }
 }
@@ -68,22 +79,14 @@
         flex-basis: 100%;
     }
 }
-%galeria-flex-items
-{
-    flex: 1 1 9.5rem; /* flex-basis:0 */
-    // min-width: 11.9rem;
-}
+
 .obras
 {
     &__wrapper
     {
         @extend %contenedor;
-
-        display: flex;
-        flex-wrap: wrap;
+        @include flex-conteiner(center, center, wrap);
         gap: 1.4rem 3rem;
-        align-items: center;
-        justify-content: center;
     }
     &__seccion
     {
@@ -106,13 +109,9 @@
     &__wrapper
     {
         @extend %contenedor;
-
-        display: flex;
-        flex-flow: row-reverse;
-        flex-wrap: wrap;
+        @include flex-conteiner(center, center, wrap, row-reverse);
         gap: 1.4rem 3rem;
-        align-items: center;
-        justify-content: center;
+
     }
     &__seccion
     {
@@ -135,13 +134,43 @@
     &__wrapper
     {
         @extend %contenedor;
+        @include flex-conteiner(center, center, wrap);
+        gap:3rem 3rem;
+    }
+    &__seccion, &__contenedor
+    {
+        flex: 1 1 0;
+        min-width: 18.5rem;
+    }
+    &__seccion
+    {
+        //solucionar margin extra de parrafos
+        margin-bottom: -1.4rem; 
     }
 }
+.footer
+{
+    &__contenedor
+    {
+        @extend %contenedor;
+
+        @include flex-conteiner($a-items: stretch, $j-content:space-between, $f-wrap:wrap, $f-direction: column);
+        gap: 1.5rem;
+
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+    
+    &__sucursales
+    {
+        @include flex-conteiner(flex-start, space-between, nowrap, column);
+        gap: 2rem;
+    }
+}
+
 .derechos-reservados
 {
     height: 4rem;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-conteiner(center,center)
 }

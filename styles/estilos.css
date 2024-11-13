@@ -133,25 +133,32 @@ body {
   gap: 0.6rem;
 }
 
-.ubicacion__wrapper, .materiales__wrapper, .obras__wrapper, .contacto__contenedor, .sobre-nos__wrapper, .encbzdo__contenedor {
+.footer__contenedor, .ubicacion__wrapper, .materiales__wrapper, .obras__wrapper, .contacto__contenedor, .sobre-nos__wrapper, .encbzdo__contenedor {
   padding: 0 1.4rem;
   max-width: 980px;
   margin: 0 auto;
 }
 
+.materiales__img, .obras__img {
+  flex: 1 1 9.5rem;
+}
+
 .encbzdo__contenedor {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: nowrap;
   height: 3.8rem;
 }
 
 .sobre-nos__contenedor {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: row;
   align-items: flex-start;
-  align-content: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
   gap: 2.5rem 3rem;
 }
 
@@ -179,16 +186,13 @@ body {
   flex-basis: 100%;
 }
 
-.materiales__img, .obras__img {
-  flex: 1 1 9.5rem; /* flex-basis:0 */
-}
-
 .obras__wrapper {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.4rem 3rem;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.4rem 3rem;
 }
 .obras__seccion {
   flex: 1 1 18rem;
@@ -198,11 +202,11 @@ body {
 }
 .materiales__wrapper {
   display: flex;
-  flex-flow: row-reverse;
-  flex-wrap: wrap;
-  gap: 1.4rem 3rem;
+  flex-direction: row-reverse;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.4rem 3rem;
 }
 .materiales__seccion {
   flex: 1 1 18rem;
@@ -210,11 +214,48 @@ body {
 .materiales__contenedor {
   flex: 1 1 29.7rem;
 }
+.ubicacion__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem 3rem;
+}
+.ubicacion__seccion, .ubicacion__contenedor {
+  flex: 1 1 0;
+  min-width: 18.5rem;
+}
+.ubicacion__seccion {
+  margin-bottom: -1.4rem;
+}
+
+.footer__contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.footer__sucursales {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+
 .derechos-reservados {
   height: 4rem;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  flex-wrap: nowrap;
 }
 
 .banner__boton, .materiales__boton, .obras__boton, .contacto__btn {
@@ -321,7 +362,7 @@ body {
   margin: 0 auto;
 }
 
-form {
+.form {
   margin: 0 auto;
   max-width: 34rem;
 }
@@ -377,6 +418,22 @@ form {
 
 .footer {
   background-color: rgb(244, 244, 244);
+}
+.footer__logo {
+  min-width: 8.5rem;
+  width: 22%;
+  max-width: 10.7rem;
+}
+
+.sucursal__nombre {
+  display: inline-block;
+  color: rgb(59, 159, 100);
+  margin-bottom: 0.7rem;
+  font-style: normal;
+  font-weight: bolder;
+}
+.sucursal__texto {
+  font-size: 0.8rem;
 }
 
 .derechos-reservados {

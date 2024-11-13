@@ -162,7 +162,7 @@ $tam-texto-label:0.8rem;
         margin: 0 auto;
     }
 }
-form
+.form
 {
     margin: 0 auto;
     max-width: 34rem;
@@ -244,6 +244,36 @@ form
 .footer
 {
     background-color: rgb(244, 244, 244);
+    // &__logo
+    // {
+    //     width: 22%;
+    //     min-width: 7rem;
+    //     max-width: 10.7rem;
+    // }
+    &__logo     
+    {
+        min-width: 8.5rem;
+        width: 22%;
+        max-width: 10.7rem;
+    }
+}
+.sucursal
+{
+    &__nombre
+    {
+        display: inline-block;
+        color: $co-controles;
+        margin-bottom: .7rem;
+        font:
+        {
+            style: normal;
+            weight: bolder;
+        }
+    }
+    &__texto
+    {
+        font-size: .8rem;
+    }
 }
 .derechos-reservados
 {
