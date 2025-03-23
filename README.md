@@ -1,4 +1,4 @@
-# Clon de la Página Web SF Calistenia
+# Clon del Sitio Web Maderas Kopruch
 
 <a href="https://maderaskopruch.com.ar/" target="_blank">Página original</a>
 <a href="https://alexrubenpumari.github.io/web-clon-materiales-obra-zo/" target="_blank">Copia de la página</a>
