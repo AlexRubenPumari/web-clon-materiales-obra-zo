@@ -6,7 +6,7 @@
 ## Tecnologias
 
 ![HTML](https://img.shields.io/badge/HTML-%23E34F26)
-![SCSS](https://img.shields.io/badge/SCSS?color=%23C66394)
+![SCSS](https://img.shields.io/badge/SCSS-%23C66394)
 
 
 ## Descripción
